@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1139 527">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #ccc;
+        font-size: 24px;
+      }
+
+      .st0, .st1, .st2, .st3 {
+        font-family: Consolas, Consolas;
+      }
+
+      .st1, .st4, .st5, .st2, .st6, .st7, .st3 {
+        isolation: isolate;
+      }
+
+      .st1, .st2 {
+        font-size: 69.9px;
+      }
+
+      .st8 {
+        stroke: #00b707;
+      }
+
+      .st8, .st9 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .st10 {
+        fill: #d4d4ff;
+      }
+
+      .st4 {
+        fill: gray;
+      }
+
+      .st4, .st6, .st7 {
+        font-family: Consolas-Italic, Consolas;
+        font-style: italic;
+      }
+
+      .st4, .st6, .st7, .st3 {
+        font-size: 60px;
+      }
+
+      .st11 {
+        opacity: .2;
+      }
+
+      .st2 {
+        fill: #07a;
+      }
+
+      .st7 {
+        fill: #00b707;
+      }
+
+      .st3 {
+        fill: #111;
+      }
+
+      .st9 {
+        stroke: #8f0000;
+      }
+    </style>
+  </defs>
+  <g class="st5">
+    <text class="st2" transform="translate(11 121.4)"><tspan x="0" y="0">for </tspan></text>
+    <text class="st1" transform="translate(164.7 121.4)"><tspan x="0" y="0" xml:space="preserve">       </tspan></text>
+    <text class="st2" transform="translate(433.5 121.4)"><tspan x="0" y="0" xml:space="preserve">in range(   </tspan></text>
+    <text class="st1" transform="translate(894.5 121.4)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st2" transform="translate(932.9 121.4)"><tspan x="0" y="0" xml:space="preserve">   )</tspan></text>
+    <text class="st1" transform="translate(1086.6 121.4)"><tspan x="0" y="0">:</tspan></text>
+    <text class="st6" transform="translate(11 193.4)"><tspan x="0" y="0" xml:space="preserve">    </tspan></text>
+    <text class="st7" transform="translate(143 193.4)"><tspan x="0" y="0">Code répété</tspan></text>
+    <text class="st7" transform="translate(11 265.4)"><tspan x="0" y="0" xml:space="preserve">    pour chaque itération</tspan></text>
+    <text class="st7" transform="translate(11 337.4)"><tspan x="0" y="0" xml:space="preserve">    de la boucle</tspan></text>
+    <text class="st3" transform="translate(11 481.4)"><tspan x="0" y="0">...suite du code</tspan></text>
+  </g>
+  <g>
+    <rect class="st10" x="136" y="64" width="279" height="70"/>
+    <g class="st5">
+      <text class="st4" transform="translate(141 117)"><tspan x="0" y="0">variable</tspan></text>
+    </g>
+  </g>
+  <g class="st11">
+    <path class="st8" d="M551,317c126,0,101,40,25,101"/>
+    <line class="st8" x1="575.4" y1="420.7" x2="573.4" y2="395.2"/>
+    <line class="st8" x1="573.9" y1="419.1" x2="599.3" y2="417.1"/>
+  </g>
+  <g class="st11">
+    <path class="st9" d="M552,327c177,82-358,82-416,63-127.9-41.9-12.2-249.7-12.2-249.7"/>
+    <line class="st9" x1="125.3" y1="139.5" x2="132.9" y2="162.1"/>
+    <line class="st9" x1="126.3" y1="139.9" x2="102" y2="145.8"/>
+  </g>
+  <rect class="st10" x="776" y="68" width="121" height="70"/>
+  <g class="st5">
+    <text class="st4" transform="translate(786 121)"><tspan x="0" y="0">min</tspan></text>
+  </g>
+  <rect class="st10" x="935" y="68" width="121" height="70"/>
+  <g class="st5">
+    <text class="st4" transform="translate(945 121)"><tspan x="0" y="0">max</tspan></text>
+  </g>
+  <text class="st0" transform="translate(937.4 46.8)"><tspan x="0" y="0">exclusif</tspan></text>
+  <text class="st0" transform="translate(781.2 47.1)"><tspan x="0" y="0">inclusif</tspan></text>
+</svg>

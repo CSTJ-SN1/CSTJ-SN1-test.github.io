@@ -1,0 +1,144 @@
+:root {
+    --accent: #4D2B8C;
+    --accent-dark: #2e1b4e;
+    --surface: #ffffff;
+    --border: #e0d8f5;
+    --code-bg: #ede8f8;
+    --link-color: #4D2B8C;
+    --var-color: rgb(151, 31, 111);
+}
+
+/* ── Fluid font: confortable sur mobile, grand sur projecteur ── */
+html {
+    font-size: clamp(17px, 2vw, 26px);
+    font-family: Inter, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    color: #1a1030;
+    background: linear-gradient(150deg, #2e1b4e 0%, #4D2B8C 100%) fixed;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--link-color);
+}
+
+/* ── Container centré ── */
+.container {
+    width: min(88vw, 860px);
+    margin: 0 auto;
+    background: var(--surface);
+    min-height: 100vh;
+    padding: 2rem 2.5rem 4rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 100%;
+        padding: 1.2rem 1rem 3rem;
+        box-shadow: none;
+    }
+}
+
+/* ── Titre ── */
+h1 {
+    text-align: center;
+    color: var(--accent-dark);
+    font-size: 1.6rem;
+    font-weight: 800;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ── Liste d'exercices ── */
+ol {
+    padding-left: 1.4rem;
+}
+
+ol li::marker {
+    font-weight: 800;
+    color: var(--accent);
+    font-size: 1.05em;
+}
+
+.container > ol > li {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.65;
+}
+
+.container > ol > li:last-child {
+    border-bottom: none;
+}
+
+ul li {
+    margin: 0.3rem 0;
+}
+
+/* ── Utilitaires ── */
+.gray {
+    color: #999;
+}
+
+span.var {
+    display: inline-block;
+    font-style: italic;
+    color: var(--var-color);
+    font-weight: bold;
+}
+
+/* ── Code ── */
+:not(pre) > code[class*="language-"] {
+    background-color: var(--code-bg) !important;
+    border-radius: 4px !important;
+    padding: 0.05em 0.25em !important;
+    font-size: 0.88em;
+}
+
+pre[class*="language-"] {
+    background-color: var(--code-bg) !important;
+    border-radius: 8px !important;
+    border-left: 4px solid var(--accent) !important;
+    margin: 0.8rem 0 !important;
+    padding: 0.9rem 1rem !important;
+    font-size: 0.85em;
+    overflow-x: auto;
+}
+
+pre:not([class]) {
+    background: var(--code-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+    padding: 0.8rem 1rem;
+    font-size: 0.85em;
+    overflow-x: auto;
+}
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url {
+    background: none !important;
+}
+
+/* ── Images ── */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* ── Formules LaTeX ── */
+.latex {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+p.margin-0 {
+    margin: 0;
+}

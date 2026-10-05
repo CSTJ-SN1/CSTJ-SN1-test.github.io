@@ -1,0 +1,249 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 07</h2>
+</div>
+
+<div class="slide center">
+    <h1>Révision</h1>
+</div>
+
+<style>
+    .recap {
+        margin: 0px;
+        padding: 20px;
+        font-size: 0.5rem;
+        display: grid;
+        grid-template-rows: 4fr 6fr;
+        gap: 10px;
+        width: auto;
+        height: auto;
+
+        td {}
+
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .block {
+            .title {
+                background-color: #333;
+                color: #fff;
+                padding: 9px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    table th,
+    table td {
+        padding: 0.1rem;
+    }
+</style>
+
+<div class="slide recap">
+    <div class="row">
+        <table>
+            <tr>
+                <th colspan="2">Types</th>
+            </tr>
+            <tr>
+                <td><code class="language-python">int</code></td>
+                <td>10, -10</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">float</code></td>
+                <td>4.5, 10.0</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">str</code></td>
+                <td>"Texte"</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">bool</code></td>
+                <td>True ou False</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">list</code></td>
+                <td>["a", "b"]</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">None</code></td>
+                <td>Vide</td>
+            </tr>
+        </table>
+        <!-- ============================ -->
+        <table>
+            <tr>
+                <th colspan="2">Opérateurs</th>
+            </tr>
+            <tr>
+                <td><code class="language-python">+</code></td>
+                <td>Addition</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">-</code></td>
+                <td>Soustraction</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">*</code></td>
+                <td>Multiplication</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">/</code></td>
+                <td>Division</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">%</code></td>
+                <td>Modulo (reste)</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">**</code></td>
+                <td>Exposant</td>
+            </tr>
+        </table>
+        <!-- ============================ -->
+        <div class="block">
+            <div class="title">Conversion de types</div>
+            <pre><code class="language-python">a = int(input("Nombre:"))
+b = a * 2
+
+a_str = str(b)
+print("Valeur: " + b)</code></pre>
+        </div>
+
+        <!-- ============================ -->
+        <div class="block">
+            <div class="title">Conditions</div>
+
+            <pre><code class="language-python">titre = "Matrice"
+
+if titre == "Pirate":
+    print("Jack")
+elif titre == "Matrice":
+    print("Neo")
+else:
+    print("Inconnu")
+        </code></pre>
+        </div>
+        <!-- ============================ -->
+        <div class="block">
+            <div class="title">Boucles</div>
+            <pre><code class="language-python">for i in range(10):
+    print(i)
+
+lettres = ["a", "b", "c"]
+
+for lettre in lettres:
+    print(lettre)
+        </code></pre>
+        </div>
+        <!-- ============================ -->
+        <div class="block">
+            <div class="title">Aléatoire (random)</div>
+            <pre><code class="language-python">import random
+# float de 0 et 1
+random.random()
+
+# int entre a et b
+random.randint(a, b)
+
+# float entre a et b
+random.uniform(a, b)
+        </code></pre>
+        </div>
+        <!-- ============================ -->
+    </div>
+
+    <div class="row">
+        <table>
+            <tr>
+                <th colspan="2">Comparaisons</th>
+            </tr>
+            <tr>
+                <td><code class="language-python">5 &lt; 10</code></td>
+                <td>Plus petit</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">5 &lt;= 10</code></td>
+                <td>Plus petit ou égal</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">10 &gt; 5</code></td>
+                <td>Plus grand</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">10 &gt;= 5</code></td>
+                <td>Plus grand ou égal</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">10 == 10</code></td>
+                <td>Est égal</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">10 != 20</code></td>
+                <td>N'est pas égal</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">True and True</code></td>
+                <td>... Et ...</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">True or False</code></td>
+                <td>... Ou ...</td>
+            </tr>
+            <tr>
+                <td><code class="language-python">not False</code></td>
+                <td>Inverse le booléen</td>
+            </tr>
+        </table>
+        <!-- ============================ -->
+        <div class="block">
+            <div class="title">Math</div>
+            <pre><code class="language-python">import math
+
+math.sqrt(n)
+math.sin(n)
+math.cos(n)
+math.atan2(n)
+math.pi
+        </code></pre>
+        </div>
+        <!-- ============================ -->
+        <div class="block">
+            <div class="title">Fichiers textes et CSV</div>
+            <pre><code class="language-python"># Fichier texte
+with open("fichier.txt") as f:
+    lignes = f.readlines()
+    
+    for ligne in lignes:
+        print(ligne) # str
+
+# Fichier CSV
+import csv
+
+with open("fichier.csv") as f:
+    lignes = csv.reader(f)
+    
+    for ligne in lignes:
+        print(ligne) # list</code></pre>
+        </div>
+        <!-- ============================ -->
+        <div class="block">
+            <div class="title">Matplotlib</div>
+            <pre><code class="language-python">import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = fig.add_subplot()
+
+# Instructions ici
+
+ax.set_title("Titre du graphique")
+ax.set_xlabel("Axe des X") 
+ax.set_ylabel("Axe des Y") 
+
+plt.show()</code></pre>
+        </div>
+    </div>
+</div>

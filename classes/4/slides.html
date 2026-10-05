@@ -1,0 +1,191 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 04</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Listes</li>
+            <li>Boucles et répétition - Suite</li>
+            <li>Matlib et graphiques - Formes</li>
+            <li>Exercices</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Les listes</h1>
+    <ul>
+        <li>Suite de valeurs</li>
+        <li>Contenus dans une seule variable</li>
+        <li>Types peuvent variés</li>
+        <li>Syntaxe: <code class="language-python">[10, True, "Item"]</code></li>
+        <li>Débute avec un <em>index</em> de <code class="language-python">0</code></li>
+    </ul>
+</div>
+
+<div class="slide center">
+    <p>
+    <pre style="font-size: 1.2rem;"><code class="language-python">#                  0         1       2
+personnages = ["Frieren", "Fern", "Stark"]
+
+print( personnages[0] ) # Frieren
+print( personnages[1] ) # Fern
+print( personnages[2] ) # Stark
+    </code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Ajouter à une liste existante</h1>
+    <p>On peut ajouter une nouvelle valeur à une liste avec <code class="language-python">.append(valeur)</code></p>
+    <p>
+    <pre><code class="language-python">positions = [42, 100]
+        
+positions.append(142)
+positions.append(200)
+
+#   0   1    2    3
+# [42, 100, 142, 200]</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Supprimer un <em>index</em> dans une liste</h1>
+    <p>On peut supprimer un index avec <code class="language-python">.pop(index)</code></p>
+    <p>
+    <pre><code class="language-python">#             0   1    2    3
+positions = [42, 100, 142, 200]
+
+positions.pop(2) # Enlève 142
+
+#                             0   1    2  << changé!
+# positions vaut maintenant [42, 100, 200]
+</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Longueur d'une liste</h1>
+    <p>On peut savoir combien de valeurs sont dans une liste avec <code class="language-python">len(liste)</code></p>
+    <p>
+    <pre><code class="language-python">#       0    1    2
+nbs = ["a", "b", "c"]
+quantite = len(nbs) # 3</code></pre>
+    </p>
+    <p>On remarque que le <code class="language-python">len()</code> sera toujours 1 de plus que le dernier index.</p>
+</div>
+
+<div class="slide">
+    <h1>Boucles avec une liste</h1>
+    <p>Les listes sont presque toujours utilisées avec les boucles.</p>
+    <p>Il existe deux façons de traiter chaque élément d'une liste.</p>
+
+
+</div>
+
+<div class="slide">
+    <h1>Boucle avec liste</h1>
+    <h2>Version courte</h2>
+    <p>
+    <pre><code class="language-python">noms = ["Alexa", "Amélie", "Arya"]
+
+for nom in noms:
+    print(nom)</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Boucle avec liste</h1>
+    <h2>Version longue (avec index)</h2>
+    <p>
+    <pre><code class="language-python">noms = ["Alexa", "Amélie", "Arya"]
+
+quantite_noms = len(noms) # 3
+
+for index in range(quantite_noms):  # range(3)
+    nom = noms[index] # << La ligne magique 
+    print(str(index) + ": " + nom)</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Dessiner des formes</h1>
+    <p>Une autre <em>librairie de code</em> qui utilise <strong>matplotlib</strong> est disponible pour dessiner des formes.</p>
+    <p>
+    <pre><code class="language-python">import dessin</code></pre>
+    </p>
+    <p>On pourra l'utiliser pour afficher des formes géométriques variées.
+</div>
+
+<div class="slide">
+    <h1>Les grandes lignes de cette librarie</h1>
+    <pre><code class="language-python">dessin.nouveau(100, 100)
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=
+# Commandes de dessin ici...
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+dessin.afficher()</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Commandes de dessin</h1>
+    <table style="font-size:0.8rem;">
+        <tr>
+            <th>Commandes</th>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.nouveau(largeur, hauteur, afficher_axes?)</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.couleur = "#00FF00"</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.rectangle(x, y, largeur, hauteur, plein?, rotation)</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.cercle(x, y, radius, plein?)</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.ellipse(x, y, largeur, hauteur, plein?, rotation)</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.ligne(x1, y1, x2, y2)</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.polygon(points, plein?)</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.afficher()</code></td>
+        </tr>
+        <tr></tr>
+    </table>
+</div>
+
+<div class="slide">
+    <h1>Configuration du dessin</h1>
+    <p>Il est aussi possible de modifier certaines informations en lien avec le dessin.</p>
+    <table style="font-size:0.8rem;">
+        <tr>
+            <td><code class="language-python">dessin.couleur = "#00FF00"</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.couleur_bordure = "#00FF00"</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">dessin.largeur_bordure = 2</code></td>
+        </tr>
+    </table>
+</div>
+
+<div class="slide center">
+    <h1><a href="../exercices/#/4" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

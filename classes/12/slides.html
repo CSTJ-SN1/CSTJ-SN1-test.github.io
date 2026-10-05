@@ -1,0 +1,146 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 12</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Binaire</li>
+            <li>Représentation en mémoire</li>
+            <li>Tests de code</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Binaire</h1>
+    <p>
+    <table>
+        <tr>
+            <th>...</th>
+            <th>1024</th>
+            <th>512</th>
+            <th>256</th>
+            <th>128</th>
+            <th>64</th>
+            <th>32</th>
+            <th>16</th>
+            <th>8</th>
+            <th>4</th>
+            <th>2</th>
+            <th>1</th>
+        </tr>
+        <tr style="text-align: center">
+            <td style="opacity: 0.5">0</td>
+            <td style="opacity: 0.5">0</td>
+            <td style="opacity: 0.5">0</td>
+            <td style="opacity: 0.5">0</td>
+            <td style="opacity: 0.5">0</td>
+            <td style="opacity: 0.5">0</td>
+            <td><strong>1</strong></td>
+            <td>0</td>
+            <td><strong>1</strong></td>
+            <td>0</td>
+            <td><strong>1</strong></td>
+            <td>0</td>
+        </tr>
+    </table>
+    </p>
+    <p>
+        <span class="latex">(1 \times 32) + </span>
+        <span style="opacity: 0.3"><span class="latex">(0 \times 16)</span></span>
+        <span class="latex">+ (1 \times 8) + </span>
+        <span style="opacity: 0.3"><span class="latex">(0 \times 4)</span></span>
+        <span class="latex">+ (1 \times 2) + </span>
+        <span style="opacity: 0.3"><span class="latex">(0 \times 1)</span></span>
+        <span class="latex">= 42</span>
+    </p>
+    <p style="margin-top: 3rem;">Pour les curieux: <code class="language-python">format(42, "b")</code></p>
+</div>
+
+<div class="slide">
+    <h1>La mémoire de l'ordinateur</h1>
+    <pre><code class="language-python">a = 10
+b = 20
+c = [30, 40]
+d = "Allo"</code></pre>
+    <p>
+    <table>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+            <th colspan="2">c</th>
+            <th colspan="4">d</th>
+        </tr>
+        <tr>
+            <td style="width: 2rem; text-align: center;">10</td>
+            <td style="width: 2rem; text-align: center;">20</td>
+            <td style="width: 2rem; text-align: center;">30</td>
+            <td style="width: 2rem; text-align: center;">40</td>
+            <td style="width: 2rem; text-align: center;">A</td>
+            <td style="width: 2rem; text-align: center;">l</td>
+            <td style="width: 2rem; text-align: center;">l</td>
+            <td style="width: 2rem; text-align: center;">o</td>
+        </tr>
+    </table>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Processeurs et nombres de "bits"</h1>
+    <p>De nos jours, presque tous nos processeurs sont en 64 bits.</p>
+    <table>
+        <tr>
+            <th>8 bits</th>
+            <th>16 bits</th>
+            <th>32 bits</th>
+            <th>64 bits</th>
+        </tr>
+        <tr>
+            <td>
+                <img src="../classes/12/medias/nes.png" style="width: 20vw">
+            </td>
+            <td>
+                <img src="../classes/12/medias/snes.png" style="width: 20vw">
+            </td>
+            <td>
+                <img src="../classes/12/medias/ps1.png" style="width: 20vw">
+            </td>
+            <td>
+                <img src="../classes/12/medias/n64.png" style="width: 10vw">
+                <img src="../classes/12/medias/phone.jpg" style="width: 5vw">
+                <img src="../classes/12/medias/pc.jpg" style="width: 5vw">
+                <img src="../classes/12/medias/server.webp" style="width: 10vw">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="slide center">
+    <img src="../classes/12/medias/tests.png" style="height: 90vh">
+</div>
+
+<div class="slide">
+    <h1>Tests de code</h1>
+    <p>Les "tests" sont des bouts de code qui valident le bon fonctionnement du reste du code.</p>
+    <pre><code class="language-python">def addition(a, b):
+    return a * b # Oops, une erreur ici!
+
+assert addition(10, 20) == 30, "Ajout de 10 et 30"</code></pre>
+    <p><img src="../classes/12/medias/assert.png" style="height: 25vh"></p>
+</div>
+
+<div class="slide center">
+    <p style="font-size: 2rem"><code class="language-python">assert 10 > 5, "Message d'erreur"</code></p>
+</div>
+
+<div class="slide center">
+    <h1><a href="../exercices/#/12" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

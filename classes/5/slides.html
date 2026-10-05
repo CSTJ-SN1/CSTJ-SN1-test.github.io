@@ -1,0 +1,222 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 05</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Matplotlib et graphiques</li>
+            <li>Ateliers</li>
+            <li>Exercices</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Matplotlib - Graphiques</h1>
+    <p>Dans un objectif plus sérieux, Matplotlib s'utilise pour visualiser nos données.</p>
+    <p>
+        <img src="../classes/5/medias/exemple1.webp" alt="" style="width: 20%">
+        <img src="../classes/5/medias/exemple2.webp" alt="" style="width: 20%">
+        <img src="../classes/5/medias/exemple3.webp" alt="" style="width: 20%">
+        <img src="../classes/5/medias/exemple4.webp" alt="" style="width: 20%">
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Créer un graphique</h1>
+    <p>
+    <pre style="font-size: 0.8rem"><code class="language-python">import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = fig.add_subplot()
+
+# Instructions ici
+
+ax.set_title("Titre du graphique")
+ax.set_xlabel("Axe des X") 
+ax.set_ylabel("Axe des Y") 
+
+plt.show()</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Tracer une ligne</h1>
+    <div class="column-2">
+        <div>
+            <p>
+            <pre><code class="language-python">x = [0, 1, 2, 3, 4]
+y = [0, 1, 4, 9, 16]
+
+ax.plot(x, y)</code></pre>
+            </p>
+            <p>On peut aussi changer le style avec une troisième valeur.</p>
+            <p>
+            <pre><code class="language-python">ax.plot(x, y, "o-")</code></pre>
+            </p>
+        </div>
+        <div>
+            <p>
+                <img src="../classes/5/medias/plot.png" style="max-width: 100%; max-height: 100%;">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Styles de lignes</h1>
+    <p style="text-align: center; font-size: 2rem; margin-bottom: 0px;">
+        <code class="language-python">"o-r"</code>
+    </p>
+    <div class="column-3">
+        <div>
+            <h2>Points</h2>
+            <table>
+                <tr>
+                    <td><code class="language-python">"o"</code></td>
+                    <td>Cercle</td>
+                </tr>
+                <tr>
+                    <td><code class="language-python">"."</code></td>
+                    <td>Point</td>
+                </tr>
+                <tr>
+                    <td><code class="language-python">"s"</code></td>
+                    <td>Carré</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><em>plusieurs autres</em></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2>Ligne</h2>
+            <table>
+                <tr>
+                    <td><code class="language-python">"-"</code></td>
+                    <td>Ligne unie</td>
+                </tr>
+                <tr>
+                    <td><code class="language-python">"--"</code></td>
+                    <td>-------</td>
+                </tr>
+                <tr>
+                    <td><code class="language-python">"-."</code></td>
+                    <td>-.-.-.-.</td>
+                </tr>
+                <tr>
+                    <td><code class="language-python">":"</code></td>
+                    <td>.......</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h2>Couleur</h2>
+            <table>
+                <tr>
+                    <td><code class="language-python">"r"</code></td>
+                    <td>Rouge (red)</td>
+                </tr>
+                <tr>
+                    <td><code class="language-python">"g"</code></td>
+                    <td>Vert (green)</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><em>plusieurs autres</em></td>
+                </tr>
+            </table>
+            <p><a target="_blank" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html">Liste complète</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Diagramme à barres</h1>
+    <div class="column-2">
+        <div>
+            <p>
+            <pre><code class="language-python">x = ["A", "B", "C", "D"]
+y = [2, 7, 4, 6]
+
+ax.bar(x, y)</code></pre>
+            </p>
+        </div>
+        <div>
+            <p>
+                <img src="../classes/5/medias/bar.png" style="max-width: 100%; max-height: 100%;">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Diagramme circulaire</h1>
+    <div class="column-2">
+        <div>
+            <p>
+            <pre><code class="language-python">y = [35, 25, 25, 15]
+
+ax.pie(y)</code></pre>
+            </p>
+            <p>Ou encore avec des libellés:</p>
+            <p>
+            <pre><code class="language-python">y = [25, 15, 35, 5]
+labels = ["A", "B", "C", "D"]
+
+ax.pie(y, labels=labels)</code></pre>
+            </p>
+        </div>
+        <div>
+            <p>
+                <img src="../classes/5/medias/pie.png">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Un exemple plus complexe</h1>
+    <div class="column-2">
+        <div>
+            <p style="margin: 0px;">
+            <pre style="font-size: 0.55rem"><code class="language-python">import matplotlib.pyplot as plt
+    import random
+    
+    fig = plt.figure()
+    ax = fig.add_subplot(projection="3d")
+    
+    voxels = []
+    
+    for i in range(100):
+        x = random.randint(0, 10)
+        y = random.randint(0, 10)
+        z = random.randint(0, 10)
+        voxels.append([x, y, z])
+    
+    for voxel in voxels:
+        ax.bar3d(voxel[0], voxel[1], voxel[2], 1, 1, 1, color="#FF00FF")
+    
+    plt.show()</code></pre>
+            </p>
+        </div>
+        <div>
+            <img src="../classes/5/medias/3d.png">
+        </div>
+    </div>
+</div>
+
+<div class="slide center">
+    <h1><a target="_blank" href="https://matplotlib.org/stable/plot_types/index.html">Et plein d'autres!</a></h1>
+</div>
+
+<div class="slide center">
+    <h1><a href="../exercices/#/5" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

@@ -1,0 +1,260 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 02</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Commentaires de code</li>
+            <li>Types de valeurs</li>
+            <li>Conversion de types</li>
+            <li>Lecture d'entrées utilisateur</li>
+            <li>Comparaisons et booléens</li>
+            <li>Structure de contrôle : <strong>Conditions</strong></li>
+            <li>Exercices</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Commentaires de code</h1>
+    Dans Jupyter, il existe deux façons d'ajouter des informations pertinentes autour de notre code.
+
+    <ol>
+        <li>
+            Ajouter un bloc "Markdown" avant un bloc de code.<br>
+            <img src="../classes/2/medias/commentaire_markdown.png" alt="">
+        </li>
+        <li>
+            Ajouter un commentaire directement dans le code à l'aide du symbole <code class="language-python">#</code>
+            <pre><code class="language-python"># Constante PI
+pi = 3.14159265</code></pre>
+        </li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h1>Pourquoi des commentaires?</h1>
+    <p>Plutôt que de décrire en français le code, il faut plutôt <strong>indiquer son sens et/ou sa raison d'être</strong>.</p>
+    <p>Votre propre code vous sera étranger dans quelques semaines.</p>
+    <p>
+        <img src="../classes/2/medias/comments_stop.jpg" style="height: 35vh">
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Types de valeurs</h1>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th></th>
+            <th>Exemple</th>
+        </tr>
+        <tr>
+            <td><code class="language-python">int</code></td>
+            <td>nombre entier</td>
+            <td><code class="language-python">42</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">bool</code></td>
+            <td>booléen</td>
+            <td><code class="language-python">True</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">str</code></td>
+            <td>chaine de caractères</td>
+            <td><code class="language-python">"Abcde fghij k"</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">list</code></td>
+            <td>liste</td>
+            <td><code class="language-python">[2042, "Python", True]</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">None</code></td>
+            <td>Sans valeur</td>
+            <td><code class="language-python">None</code></td>
+        </tr>
+    </table>
+</div>
+
+<div class="slide">
+    <h1>Convertir d'un type à un autre</h1>
+    <p>Il est possible de convertir certains types de valeurs vers d'autres à l'aide de <em>fonctions</em> spéciales.</p>
+
+    <div class="column-2">
+        <div>
+            <table>
+                <tr>
+                    <th>Fonction</th>
+                    <th>Types possibles</th>
+                </tr>
+                <tr>
+                    <td><code class="language-python">int()</code></td>
+                    <td>str, float, bool</td>
+                </tr>
+                <tr>
+                    <td><code class="language-python">float()</code></td>
+                    <td>str, int, bool</td>
+                </tr>
+                <tr>
+                    <td><code class="language-python">str()</code></td>
+                    <td>int, float, bool</td>
+                </tr>
+                <tr>
+                    <td><code class="language-python">bool()</code></td>
+                    <td>str, int, float</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <pre><code class="language-python">nombre = 42
+texte = str(nombre)
+print(texte + "!")</code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="slide center">
+    <pre style="font-size: 1.8rem"><code class="language-python">0.1 + 0.2 = ?</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Précision des floats</h1>
+    <pre><code class="language-python">0.1 + 0.2 = 0.30000000000000004</code></pre>
+    <p>
+        <img src="../classes/2/medias/wait-what.gif" style="height: 30vh">
+    </p>
+
+    <p>Pour le moment, on se contentera de se rappeler que <strong>les opérations avec des <code class="language-python">float</code>s ne <a target="_blank" href="https://0.30000000000000004.com/">sont pas précises</a></strong>.</p>
+</div>
+
+<div class="slide">
+    <h1>Entrée utilisateur</h1>
+    <p>Pour certains programmes, il est utile de permettre à l'utilisateur de personnaliser certaines valeurs.</p>
+    <p>On utilise la <em>fonction</em> <code class="language-python">input()</code> qui sera remplacée par la valeur entrée par l'utilisateur.</p>
+    <p>
+    <pre><code class="language-python">age_texte = input("Entrez votre age")
+age = int(age_texte)
+print(age)</code></pre>
+    </p>
+    <p>Les valeurs reçues seront <strong>toujours</strong> de type <code class="language-python">str</code>. Il faudra, au besoin, les convertir.</p>
+</div>
+
+<div class="slide">
+    <h1>Obtenir un booléen</h1>
+    <table style="font-size: 0.75rem">
+        <tr>
+            <th>Opérateur</th>
+            <th></th>
+            <th>Exemple</th>
+        </tr>
+        <tr>
+            <td><code class="language-python">&lt;</code></td>
+            <td>Plus petit</td>
+            <td><code class="language-python">5 &lt; 10</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">&lt;=</code></td>
+            <td>Plus petit ou égal</td>
+            <td><code class="language-python">5 &lt;= 10</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">&gt;</code></td>
+            <td>Plus grand</td>
+            <td><code class="language-python">10 &gt; 5</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">&gt;=</code></td>
+            <td>Plus grand ou égal</td>
+            <td><code class="language-python">10 &gt;= 5</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">==</code></td>
+            <td>Est égal</td>
+            <td><code class="language-python">10 == 10</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">!=</code></td>
+            <td>N'est pas égal</td>
+            <td><code class="language-python">10 != 20</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">and</code></td>
+            <td>... Et ...</td>
+            <td><code class="language-python">True and True</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">or</code></td>
+            <td>... Ou ...</td>
+            <td><code class="language-python">True or False</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">not</code></td>
+            <td>Inverse le booléen</td>
+            <td><code class="language-python">not False</code></td>
+        </tr>
+    </table>
+</div>
+
+<div class="slide">
+    <h1>Condition <code class="language-python">if</code></h1>
+    <p>Il est possible de rendre <strong>l'exécution</strong> de certaines parties du code restrictives.</p>
+    <p>On parle alors de <strong>structure de contrôle</strong>.</p>
+    <p>
+    <pre><code class="language-python">if age >= 18:
+    print("Vous êtes majeur")
+else:
+    print("Vous êtes mineur")</code></pre>
+    </p>
+</div>
+
+<div class="slide center">
+    <img src="../classes/2/medias/condition.svg" style="height: 100%;">
+</div>
+
+<div class="slide">
+    <pre><code class="language-python">jour = input("Quel jour de la semaine?")
+
+if jour == "samedi" or jour == "dimanche":
+    print("Dormir...")
+    print("Jouer à l'ordinateur")
+    print("Faire du sport à -8000°")
+else:
+    print("Aller à mes cours")
+    print("Discuter avec mes collègues")
+
+print("Pratiquer mon Python 😇")</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Versions alternatives du <code class="language-python">if</code></h1>
+    <div class="column-2" style="grid-template-columns: minmax(0, 1.3fr) minmax(0, 2fr);">
+        <div>
+            <h2 style="margin-top: 0px;">Sans <code class="language-python">else</code></h2>
+            <pre><code class="language-python">if vies <= 0:
+    print("Perdu!")</code></pre>
+        </div>
+        <div>
+            <h2 style="margin-top: 0px;">Plusieurs conditions</h2>
+            <pre><code class="language-python">if mois == "janvier":
+    print("Bonne année!")
+elif mois == "décembre":
+    print("Joyeux Noël!")
+else:
+    print("🚫 Mariah Carey 🚫")
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="slide center">
+    <h1><a href="../exercices/#/2" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

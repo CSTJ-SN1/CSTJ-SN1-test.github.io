@@ -1,0 +1,142 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 06</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Lecture et écriture de fichiers</li>
+            <li>Fichiers CSV</li>
+            <li>Manipulation de texte</li>
+            <li>Ateliers</li>
+            <li>Exercices</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Lire un fichier texte</h1>
+    <p>On peut lire le contenu d'un fichier</p>
+    <p>
+    <pre><code class="language-python">with open("un_fichier.txt") as f:
+    # Tout le texte du fichier en str:
+    texte = f.read()
+
+    # Chaque ligne dans une liste:
+    lignes = f.readlines()</code></pre>
+    </p>
+
+    <p>Important: Il faut choisir entre <code class="language-python">read</code> et <code class="language-python">readlines</code>. On ne peut pas utiliser les deux!</p>
+</div>
+
+<div class="slide">
+    <h1>Écrire dans un fichier texte</h1>
+    <p>Lors de l'ouverture du fichier, on peut indiquer qu'on va y écrire du contneu.</p>
+    <p><strong>Créer ou écraser</strong> un fichier: <code class="language-python">open("un_fichier.txt", "w")</code></p>
+    <p><strong>Ajouter</strong> à un fichier existant: <code class="language-python">open("un_fichier.txt", "a")</code></p>
+    <p>
+    <pre><code class="language-python">with open("un_fichier.txt", "w") as f:
+    phrase = "J'utilise un fichier en Python"
+    f.write(phrase)</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Lecture d'un fichier CSV (Excel)</h1>
+    <p>
+    <pre><code class="language-python">import csv
+
+with open('un_fichier.csv') as f:
+    lignes = csv.reader(f)
+
+    # Au besoin, on saute la première ligne d'entête.
+    # next(lignes)
+    
+    for ligne in lignes:
+        print(ligne)</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Manipulation de <code class="language-python">str</code></h1>
+    <p>On peut penser à un <code class="language-python">str</code> comme une liste de lettres.</p>
+    <p>
+    <pre><code class="language-python">prenom = "Aira"
+print(prenom[0]) # A
+print(prenom[1]) # i
+print(prenom[2]) # r
+print(prenom[3]) # a
+    </code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Fonctions de <code class="language-python">str</code></h1>
+    <table style="font-size: 0.8rem">
+        <tr>
+            <th>Nom</th>
+            <th>Exemple</th>
+            <th>Résultat</th>
+        </tr>
+        <tr>
+            <td><code class="language-python">s.lower()</code></td>
+            <td><code class="language-python">"ACDC".lower()</code></td>
+            <td><code class="language-python">"acdc"</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">s.upper()</code></td>
+            <td><code class="language-python">"abcd".upper()</code></td>
+            <td><code class="language-python">"ABCD"</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">s.strip()</code></td>
+            <td><code class="language-python">" abc ".strip()</code></td>
+            <td><code class="language-python">"abc"</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">s.replace(old, new)</code></td>
+            <td><code class="language-python">"Barbara".replace("a", "o")</code></td>
+            <td><code class="language-python">"Borboro"</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">s.split(separator)</code></td>
+            <td><code class="language-python">"a-b-c".split("-")</code></td>
+            <td><code class="language-python">["a", "b", "c"]</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">s.find(search)</code></td>
+            <td><code class="language-python">"abcd".find("d")</code></td>
+            <td><code class="language-python">2</code></td>
+        </tr>
+    </table>
+</div>
+
+<div class="slide">
+    <h1>"f-string" : Une autre façon de créer un <code class="language-python">str</code></h1>
+    <p>
+    <pre><code class="language-python">nom = "Iris"
+age = 24
+phrase = f"Utilisateur: {nom}, age: {age}"
+#        ^ le f est important!</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Retour de ligne</h1>
+    <p>Pour représenter un retour de ligne en programmation, on utilise:</p>
+    <p style="text-align: center;">
+        <code style="font-size: 3rem" class="language-python">"\n"</code>
+    </p>
+</div>
+
+
+<div class="slide center">
+    <h1><a href="../exercices/#/6" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

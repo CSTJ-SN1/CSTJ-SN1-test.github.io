@@ -1,0 +1,313 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 01</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Introduction à la programmation</li>
+            <li>Plan de cours</li>
+            <li>Python et Jupyter</li>
+            <li>Variables</li>
+            <li>Opérateurs et priorités</li>
+            <li>Intelligence artificielle</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide center">
+    <h1>Qu'est-ce que la<br>programmation?</h1>
+    <h2>Une façon de <a target="_blank" href="https://www.larousse.fr/dictionnaires/francais/communiquer/17568">communiquer</a><br> l'<a target="_blank" href="https://www.larousse.fr/dictionnaires/francais/algorithme/2238">algorithme</a> d'un problème<br> à l'ordinateur</h2>
+</div>
+
+<div class="slide center">
+    <video src="../classes/1/medias/transistor.mp4" controls muted style="height: 60vh;"></video>
+    <p>Transistor: 3nm</p>
+    <p class="margin-0">~60,000,000,000 dans <strong>UN</strong> processeur</p>
+</div>
+
+<div class="slide">
+    <h1>Instructions du processeur</h1>
+    <div class="column-2">
+        <div>
+            <h3>Nombres</h3>
+            <ul>
+                <li>Addition</li>
+                <li>Soustraction</li>
+                <li>Multiplication</li>
+                <li>...</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Mémoire</h3>
+            <ul>
+                <li>Sauvegarder une valeur</li>
+                <li>Lire une valeur</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Instructions binaires</h1>
+    <div class="column-3">
+        <div>
+            <pre style="font-size: 0.8rem;"><code class="language-python">print("Salut")</code></pre>
+        </div>
+        <div>
+            <pre style="font-size: 0.5rem;"><code class="language-arm-asm">section .data
+msg db "Salut", 10
+len equ $ - msg
+
+section .text
+global _start
+
+_start:
+mov rax, 1
+mov rdi, 1
+mov rsi, msg
+mov rdx, len
+syscall
+
+mov rax, 60
+xor rdi, rdi
+syscall
+            </code></pre>
+        </div>
+        <div>
+            <pre style="font-size: 0.5rem;"><code class="language-python">01010011 01100001 01101100 01110101 01110100 00001010
+01001000 11000111 11000000 00000001 00000000 00000000 00000000
+01001000 11000111 11000111 00000001 00000000 00000000 00000000
+01001000 10111110 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+01001000 11000111 11000010 00000110 00000000 00000000 00000000
+00001111 00000101
+
+01001000 11000111 11000000 00111100 00000000 00000000 00000000
+01001000 00110001 11111111
+00001111 00000101
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <style>
+        .square {
+            width: 100%;
+            height: 30px;
+
+            &.red {
+                background-color: red;
+            }
+
+            &.green {
+                background-color: green;
+            }
+
+            &.blue {
+                background-color: blue;
+            }
+
+            &.majenta {
+                background-color: rgb(255, 0, 255);
+            }
+        }
+
+        .ascii,
+        .colors {
+            td {
+                padding: 0px 10px;
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+    <h1>Tout est un nombre!</h1>
+    <div class="column-2">
+        <div>
+            <table class="ascii">
+                <tr>
+                    <th>S</th>
+                    <th>c</th>
+                    <th>i</th>
+                    <th>e</th>
+                    <th>n</th>
+                    <th>c</th>
+                    <th>e</th>
+                </tr>
+                <tr>
+                    <td>83</td>
+                    <td>99</td>
+                    <td>105</td>
+                    <td>101</td>
+                    <td>110</td>
+                    <td>99</td>
+                    <td>101</td>
+                </tr>
+            </table>
+            <p><a target="_blank" href="https://www.rapidtables.com/code/text/ascii-table.html">Table ASCII</a></p>
+        </div>
+        <div>
+            <table class="colors" style="margin-top: 10px">
+                <tr>
+                    <th>
+                        <div class="square red"></div>
+                    </th>
+                    <th>
+                        <div class="square green"></div>
+                    </th>
+                    <th>
+                        <div class="square blue"></div>
+                    </th>
+                    <th>
+                        <div class="square majenta"></div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>255 0 0</td>
+                    <td>0 255 0</td>
+                    <td>0 0 255</td>
+                    <td>255 0 255</td>
+                </tr>
+            </table>
+            <p><a href="https://fr.wikipedia.org/wiki/Rouge-vert-bleu" target="_blank">RGB</a></p>
+        </div>
+        <div>
+            <p style="margin-bottom: 0px;">Fréquences de musique</p>
+            <img src="../classes/1/medias/sound.svg" style="height: 30vh">
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Binaire</h1>
+    <p>Dans la mémoire de l'ordinateur, les nombres sont représentés en binaire.</p>
+    <p>On y reviendra plus tard dans la session...</p>
+    <br>
+    <p>13 : 1101 <span class="opacity-25">(1*8 + 1*4 + 0*2 + 1*1)</p></span>
+    <p>42 : 101010 <span class="opacity-25">(1*32 + 0*16 + 1*8 + 0*4 + 1*2 + 0*1)</p></span>
+</div>
+
+<div class="slide center">
+    <h1>Et... pourquoi?</h1>
+</div>
+
+<div class="slide">
+    <h1>Rapide. TRÈS... rapide</h1>
+    <p>La vitesse d'un processeur est calculée en hertz.</p>
+    <p>1 GHz = 1 milliard de Hz</p>
+    <div>
+        <img src="../classes/1/medias/processor.png" style="height: 40vh">
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Aucune ambigüité</h1>
+    <p>Contrairement au français, le code aura un seul sens. Mais pas nécessairement celui qu'on pensait!</p>
+    <ul>
+        <li>Il a de la peine à marcher.</li>
+        <li>J'aime voler.</li>
+        <li>Une rose rose.</li>
+        <li>Prends la pomme. S'il y a des oranges, prends en 2.</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Mais pas nécessairement évident</h1>
+    <p class="text-center margin-0"><code class="language-python">1 + 3 + 5</code></p>
+    <p class="text-center margin-0"><code class="language-python">9</code></p>
+    <br>
+    <p class="text-center margin-0"><code class="language-python">"1" + "3" + "5"</code></p>
+    <p class="text-center margin-0"><code class="language-python">"135"</code></p>
+</div>
+
+<div class="slide">
+    <h1>Choix du langage</h1>
+    <div class="text-center">
+        <p>
+            <img src="../classes/1/medias/python.svg" style="height: 30vh; margin-right: 50px;">
+            <img src="../classes/1/medias/jupyter.svg" style="height: 30vh;">
+        </p>
+        <h2>Python<span style="font-weight: normal;"> et Jupyter</span></h2>
+        <p style="font-size:0.6rem"><a href="https://www.tiobe.com/tiobe-index/" target="_blank">TIOBE index</a></p>
+
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Types de valeurs</h1>
+    <ul>
+        <li><strong>int</strong>: Nombre entier (10, 42, -5, ...)</li>
+        <li><strong>float</strong>: Nombre avec décimale (10.0, -2.32, 3.14159, 0.0001, ...)</li>
+        <li><strong>bool</strong>: <a href="https://fr.wikipedia.org/wiki/Bool%C3%A9en" target="_blank">Booléen</a> (True, False)</li>
+        <li><strong>str</strong>: String/Texte ("Allo", "Chat", "", ...)</li>
+        <li><strong>None</strong>: Aucune valeur (None)</li>
+    </ul>
+    <br>
+    <p><code class="language-python">type(???)</code> permet de connaitre le type d'une valeur</p>
+</div>
+
+<div class="slide">
+    <h1>Variables</h1>
+    <p>On peut nommer un espace en mémoire pour y <strong>assigner</strong> une valeur et la <strong>lire</strong> ensuite.</p>
+    <pre><code class="language-python">a = 10
+b = 32
+c = a + b # Équivalent à 10 + 32
+print(c)
+    </code></pre>
+</div>
+
+<div class="slide">
+    <h1>Nom des variables</h1>
+    <p>Le nom de nos variables doit respecter certaines contraintes.</p>
+    <p>Nous devons:</p>
+    <ul>
+        <li>Débuter par une lettre minuscule (<code class="language-python">a-z</code>)</li>
+        <li>Le composer de lettres (<code class="language-python">a-z</code> ou <code class="language-python">A-A</code>), chiffres (<code class="language-python">0-9</code>) et barres soulignées (<code class="language-python">_</code>)</li>
+    </ul>
+    <p>Certains noms sont aussi <a href="https://www.w3schools.com/python/python_ref_keywords.asp" target="_blank">réservés</a> par Python.</p>
+</div>
+
+<div class="slide">
+    <h1>Opérateurs</h1>
+    <p>Voici une liste des opérateurs les plus communs.</p>
+    <ul style="list-style-type: none;">
+        <li><strong>+</strong> &nbsp;Addition</li>
+        <li><strong>-</strong> &nbsp;Soustraction</li>
+        <li><strong>*</strong> &nbsp;Multiplication</li>
+        <li><strong>/</strong> &nbsp;&nbsp;Division</li>
+        <li><strong>%</strong> &nbsp;Reste de division</li>
+        <li><strong>**</strong> &nbsp;Exposant</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Fonctions utiles</h1>
+    <pre><code class="language-python">import math
+
+angle = 0 # Une variable pour les exemples
+
+math.cos(angle)
+math.sin(angle)
+math.atan2(angle)
+math.sqrt(25)
+    </code></pre>
+</div>
+
+<div class="slide">
+    <h1>Intelligence artificielle</h1>
+    <div class="text-center">
+        <img style="height: 60vh" src="../classes/1/medias/ai_edit.jpg" title="">
+        <p style="font-size:0.4rem;">Leonardo.ai : Demons looking over classroom of students learning programming</p>
+    </div>
+</div>
+
+<div class="slide center">
+    <h1><a href="../exercices/#/1" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

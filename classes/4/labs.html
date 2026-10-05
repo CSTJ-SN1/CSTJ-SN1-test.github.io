@@ -1,0 +1,123 @@
+<h1>Exercices - Cours 4</h1>
+
+<ol>
+    <li>
+        <p>Créez une liste avec ces informations</p>
+        <ul>
+            <li>plutonium</li>
+            <li>Pu</li>
+            <li>94</li>
+        </ul>
+        <p>
+            Affichez ensuite la phrase suivante en utilisant les valeurs de la liste:<br>
+            Le <em>plutonium</em> est l'élément chimique de symbole <em>Pu</em> et de numéro atomique <em>94</em>.
+        </p>
+    </li>
+
+    <li>
+        <p>Créez une liste de votre choix avec au moins 5 éléments.</p>
+        <p>Affichez seulement l'avant-dernier élément en utilisant son index.</p>
+        <p>Extra: Est-ce possible de le faire dynamiquement en utilisant <code class="language-python">len()</code> de façon à ce que même si on ajoute des éléments dans la liste ce soit toujours l'avant denrier qui s'affiche?</p>
+    </li>
+
+    <li>
+        <p>Créez une variable contenant une liste vide.</p>
+        <p>Demandez à l'utilisateur d'ajouter 3 nombres à la liste.</p>
+        <p>Affichez la liste avec <code class="language-python">print()</code></p>
+    </li>
+
+    <li>
+        <p>Affichez seulement les nombres plus grands que 80 dans cette liste.</p>
+        <p>
+        <pre><code class="language-python">nombres = [38, 24, 71, 79, 82, 46, 29, 34, 51, 34, 36, 52, 68, 58, 46, 70, 5, 47, 24, 30, 65, 44, 43, 5, 81, 35, 89, 41, 68, 68, 58, 86, 97, 2, 35, 44, 68, 42, 51, 38, 4, 92, 3, 66, 81, 61, 69, 6, 52, 6, 85, 73, 81, 70, 84, 85, 24, 59, 76, 44, 3, 80, 99, 28, 0, 55, 79, 62, 56, 5, 65, 83, 62, 86, 70, 83, 64, 24, 53, 41, 85, 4, 70, 93, 40, 67, 83, 7, 18, 7, 19, 31, 63, 16, 80, 76, 57, 27, 95, 24]</code></pre>
+        </p>
+    </li>
+
+    <li>
+        <p>Créez une liste vide.</p>
+        <p>Ajoutez 100 nombres au hasard entre -10 et 10 dans la liste.</p>
+        <p>Affichez la liste avec <code class="language-python">print()</code></p>
+    </li>
+
+    <li>
+        <p>Avec la librairie de dessin, créez une zone de dessin de 500 par 500.</p>
+        <p>
+            Dans une boucle qui se répète 100 fois:
+        <ul>
+            <li>Trouvez un x au hasard entre 0 et 500</li>
+            <li>Trouvez un y au hasard entre 0 et 500</li>
+            <li>Trouvez un radius au hasard entre 1 et 50</li>
+            <li>Dessiner un cercle avec ces valeurs</li>
+        </ul>
+        </p>
+        <p>
+            Exemple de résultat (au hasard):<br>
+            <img src="../classes/4/medias/exercice_a.png">
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Recréez l'image suivante avec ces indices:
+        <ul>
+            <li>L'image fait 255 pixels de large.</li>
+            <li>Elle comporte 255 rectangles de 1 pixel de large.</li>
+            <li>Chaque rectangle a une couleur définie par une ligne comme la suivante:<br>
+                <code class="language-python">dessin.couleur = (x / 255.0, x / 255.0, x / 255.0)</code>
+            </li>
+        </ul>
+        </p>
+        <p>
+            <img style="box-shadow: 0px 0px 5px #000;" src="../classes/4/medias/exercice_b.png">
+        </p>
+    </li>
+
+    <li>
+        <p>
+            Recréez l'image suivante avec ces indices:
+        <ul>
+            <li>Elle consiste en plusieurs lignes tracées à partir du centre.</li>
+            <li>L'angle augmente graduellement.</li>
+            <li>Pytagore est utilisé pour trouver x2 et y2 de chaque ligne.</li>
+        </ul>
+        </p>
+        <p>
+            <img style="box-shadow: 0px 0px 5px #000;" src="../classes/4/medias/exercice_c.png">
+        </p>
+    </li>
+
+    <li>
+        <p>Complétez le code suivant en remplaçant les <code class="language-python">>?<</code> par une valeur adéquate pour obtenir une image similaire à l'exemple.</p>
+        <p>
+        <pre><code class="language-python">dessin.nouveau(600, 40, False)
+
+couleurs = ["#CF1D9A", "#2DA733", "#276DBD", "#7A0D25"]
+nb_couleurs = len(couleurs)
+
+for i in range(15):
+    x = i * >?<
+
+    forme = random.randint(0, >?<)
+    couleur_index = random.randint(0, nb_couleurs - 1)
+    couleur = couleurs[couleur_index]
+
+    dessin.couleur = >?<
+
+    if forme == 0:
+        dessin.cercle(x + 20, 20, 20)
+    elif forme == 1:
+        dessin.rectangle(x, 0, 40, 40)
+
+
+dessin.afficher()</code></pre>
+        </p>
+        <p>
+            <img src="../classes/4/medias/exercice_d.png">
+        </p>
+        <p>Êtes-vous en mesure d'ajouter des triangles?</p>
+    </li>
+
+    <li>
+        Trouver une image ou photo d'inspiration sur Internet et produire un dessin s'en inspirant.
+    </li>
+</ol>

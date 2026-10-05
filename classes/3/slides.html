@@ -1,0 +1,211 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 03</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Nombres aléatoires</li>
+            <li>Matlib et graphiques - Tortue</li>
+            <li>Boucles et répétition</li>
+            <li>Exercices</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Nombres aléatoires</h1>
+    <p>Plusieurs fonctions sont disponibles pour générer des nombres <a target="_blank" href="https://fr.wikipedia.org/wiki/Pseudo-al%C3%A9atoire">pseudo-aléatoires</a>. Pour les ajouter à notre projet, on <strong>ajoute cette ligne en haut</strong>:</p>
+    <p>
+    <pre><code class="language-python">import random</code></pre>
+    </p>
+    <table>
+        <tr>
+            <th>Fonction</th>
+            <th></th>
+            <th>Type</th>
+        </tr>
+        <tr>
+
+            <td><code class="language-python">random.random()</code></td>
+            <td>Entre 0 et 1</td>
+            <td><code class="language-python">float</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">random.randint(a, b)</code></td>
+            <td>Entre a et b</td>
+            <td><code class="language-python">int</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">random.uniform(a, b)</code></td>
+            <td>Entre a et b</td>
+            <td><code class="language-python">float</code></td>
+        </tr>
+    </table>
+</div>
+
+<div class="slide center">
+    <img src="../classes/3/medias/matplotlib.svg" style="max-width: 60%;">
+    <p><a target="_blank" href="https://matplotlib.org/stable/gallery/index">Quelques exemples</a></p>
+</div>
+
+<div class="slide">
+    <h1>Matplotlib</h1>
+    <p>On peut utiliser cette <em>librairie de code</em> de plusieurs façons.</p>
+    <p>Elle permet entre autres de:</p>
+    <ul>
+        <li>Créer des graphiques de tous genres</li>
+        <li>Créer des formes (points, lignes, polygones)</li>
+        <li>Afficher des images</li>
+    </ul>
+</div>
+
+<div class="slide center">
+    <h1>Introduction aux... tortues? 🐢</h1>
+    <p><img src="../classes/3/medias/turtle.jpg" alt=""></p>
+</div>
+
+<div class="slide">
+    <h1>Tortue avec Python</h1>
+    <p>Comme pour le random, il faut d'abord ajouter le fichier les <em>fonctions</em> à notre projet.</p>
+    <p>
+    <pre><code class="language-python">import tortue</code></pre>
+    </p>
+    <p>Puis on crée la zone de dessin (important!)</p>
+    <p>
+    <pre><code class="language-python">tortue.nouveau(100, 100)</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <p>Les grandes lignes de cette librarie</p>
+    <pre><code class="language-python">tortue.nouveau(100, 100, False) # Crée un canvas
+
+tortue.afficherTortue() # Facultatif
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=
+# Commandes de la tortue ici...
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+tortue.afficher()</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Commandes de la tortue</h1>
+    <table style="font-size:0.8rem;">
+        <tr>
+            <th>Nom</th>
+            <th>Exemple</th>
+        </tr>
+        <tr>
+            <td><code class="language-python">avancer(distance)</code></td>
+            <td><code class="language-python">tortue.avancer(10)</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">tourner(degrees)</code></td>
+            <td><code class="language-python">tortue.tourner(90)</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">tournerAZero()</code></td>
+            <td><code class="language-python">tortue.tournerAZero()</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">appuyerCrayon()</code></td>
+            <td><code class="language-python">tortue.appuyerCrayon()</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">leverCrayon()</code></td>
+            <td><code class="language-python">tortue.leverCrayon()</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">changerTailleCrayon(taille)</code></td>
+            <td><code class="language-python">tortue.changerTailleCrayon(5)</code></td>
+        </tr>
+        <tr>
+            <td><code class="language-python">changerCouleurCrayon(couleur)</code></td>
+            <td><code class="language-python">tortue.changerCouleurCrayon("red")</code></td>
+        </tr>
+        <tr></tr>
+    </table>
+</div>
+
+<div class="slide">
+    <h1>Afficher le résultat de la tortue</h1>
+    <p>On peut choisir si la tortue sera visible sur le dessin:</p>
+    <p>
+    <pre><code class="language-python">tortue.afficherTortue() # facultatif</code></pre>
+    </p>
+    <p>Finalement, pour afficher le dessin de la tortue, on utilise:</p>
+    <p>
+    <pre><code class="language-python">tortue.afficherDessin()</code></pre>
+    </p>
+</div>
+
+<div class="slide">
+    <h1>Les boucles</h1>
+    <p>Notre prochaine <strong>structure de contrôle</strong> est la boucle.</p>
+    <p>Elle permet de <strong>répéter</strong> une partie de notre code un certain nombre de fois.</p>
+    <p>
+    <pre><code class="language-python">print("Dans mon cours de Python, je devrais...")
+
+for nombre in range(0, 4):
+    print("Pratiquer")
+
+print("Et avoir du plaisir!")</code></pre>
+    </p>
+</div>
+
+<div class="slide center">
+    <img src="../classes/3/medias/boucle_for.svg" style="height: 80vh; max-width: 90%;">
+</div>
+
+<div class="slide">
+    <h1>Un exemple déconstruit</h1>
+    <div class="column-2">
+        <div>
+            <pre><code class="language-python">for nb in range(0, 3):
+    resultat = 10 + nb
+    print(resultat)</code></pre>
+        </div>
+        <div>
+            <pre style="font-size: 0.9rem;"><code class="language-python">nb = 0
+resultat = 10 + nb
+print(resultat)
+
+nb = 1
+resultat = 10 + nb
+print(resultat)
+
+nb = 2
+resultat = 10 + nb
+print(resultat)</code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Boucle while</h1>
+    <p>La boucle while est une autre façon de répéter notre code. Tant que la condition qui suit le <code class="language-python">while</code> est <code class="language-python">True</code>, la boucle se répète.</p>
+    <p>
+    <pre><code class="language-python">i = 1
+
+while i < 1000:
+    i = i * 2
+    print(i)</code></pre>
+    </p>
+    <p>Il faudra <strong>toujours</strong> modifier une variable de la condition <strong>dans la boucle</strong> pour éviter une boucle infinie.</p>
+</div>
+<div class="slide center">
+    <img src="../classes/3/medias/boucle_while.svg" style="height: 70vh; max-width: 80%;">
+</div>
+
+<div class="slide center">
+    <h1><a href="../exercices/#/3" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

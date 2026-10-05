@@ -1,0 +1,240 @@
+body {
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+@media screen {
+    body:not(.show-all) {
+        .slide:not(.active) {
+            display: none !important;
+        }
+    }
+}
+
+nav {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 15px;
+
+    div {
+        width: 50px;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        background-color: black;
+        color: white;
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+        line-height: 0px;
+        opacity: 0.4;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.disabled {
+            opacity: 0.1;
+            cursor: inherit;
+        }
+    }
+}
+
+.focus-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #00000056;
+    pointer-events: none;
+    /* DYNAMIC: */
+    /* mask: radial-gradient(circle 5rem at 0px 0px, rgb(0 0 0 / 0) 99%,  rgb(0,0,0) 100%); */
+}
+
+.margin-0 {
+    margin: 0px;
+}
+
+.column-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.column-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-25 {
+    opacity: 0.25;
+}
+
+.text-center {
+    text-align: center
+}
+
+span.var {
+    display: inline-block;
+    font-style: italic;
+    color: rgb(151, 31, 111);
+    font-weight: bold;
+}
+
+
+/* =================================== */
+/* === THÈME === */
+
+html {
+    font-size: calc(32px * (100vh / 720px));
+    font-family: Inter;
+}
+
+.slide {
+    --margin: 0.4rem;
+    --border-top-height: 20px;
+    --slide-bg-color: #f9f9f9;
+
+    position: relative;
+    margin: var(--margin);
+    padding: 0.75rem min(2rem, 4vw);
+    width: calc(100vw - (var(--margin) * 2));
+    height: calc(100vh - (var(--margin) * 2) - var(--border-top-height));
+    color: #1a1a1a;
+}
+
+@media screen {
+    body {
+        background: center / cover no-repeat url("../images/pngtree-heart-shaped-crystal-prism-with-rainbow-light-image_20930596.webp");
+    }
+
+    .slide {
+        background-color: var(--slide-bg-color);
+        box-shadow: 0px 0px 15px #0000008a;
+        margin-top: calc(var(--margin) + var(--border-top-height));
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            height: var(--border-top-height);
+            top: calc(-1 * var(--border-top-height));
+            background-color: #1a1a1a5e;
+            backdrop-filter: blur(15px);
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0.2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+li {
+    margin: 1rem 0px;
+}
+
+a {
+    color: #a34ba7;
+}
+
+table {
+    border-collapse: collapse;
+
+    th,
+    td {
+        border: 1px solid #000;
+        padding: 0.2rem 0.4rem;
+    }
+
+    th {
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+pre[class*=language-] {
+    margin: 0px !important;
+    padding: 10px !important;
+    background-color: rgb(229, 220, 240) !important;
+    border-radius: 4px;
+}
+
+:not(pre)>code[class*=language-] {
+    background-color: rgb(229, 220, 240) !important;
+    border-radius: 4px !important;
+    padding: 0px 0.2rem !important;
+}
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url {
+    background: none !important;
+}
+
+.slide.center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.slide.intro {
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: center;
+        opacity: 0.2;
+    }
+
+    h1,
+    h2 {
+        position: relative;
+        text-shadow: 0px 0px 20px var(--slide-bg-color);
+    }
+
+    h1 {
+        margin: 0px;
+        font-size: 2.6rem;
+    }
+
+}

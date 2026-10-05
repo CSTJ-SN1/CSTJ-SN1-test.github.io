@@ -1,0 +1,43 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-02-19T16:42:27.157825Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-02-19T15:46:41.210973Z",
+      "mimetype": "text/x-python",
+      "name": "dessin.py",
+      "path": "dessin.py",
+      "size": 3172,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-02-19T16:42:27.158961Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-02-19T04:27:05.445086Z",
+      "mimetype": "text/x-python",
+      "name": "tortue.py",
+      "path": "tortue.py",
+      "size": 4273,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-02-19T16:42:27.157825Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-02-19T16:42:27.158961Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

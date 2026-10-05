@@ -1,0 +1,140 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 10</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Code dans plusieurs fichiers</li>
+            <li>Le type <code class="language-python">dict</code> (dictionnaire)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Fichiers .py externes</h1>
+    <p>Il est possible de segmenter notre code en plusieurs fichiers.</p>
+    <p>Ces fichiers secondaires:</p>
+    <ul>
+        <li>Ont une extension <code class="language-python">.py</code></li>
+        <li>Contiennent seulement des fontions</li>
+        <li>Doivent faire leurs propres <code class="language-python">import</code></li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Exemple de fichier externe</h1>
+    <div class="column-2">
+        <div>
+            <p>
+            <pre><code class="language-python"># Fichier: geometrie.py
+import math
+
+def circonference(radius):
+    return 2 * math.pi * radius</code></pre>
+            </p>
+        </div>
+        <div>
+            <p>
+            <pre><code class="language-python"># Fichier de Notebook .ipynb
+import geometrie
+
+c = geometrie.circonference(10)
+print(c)</code></pre>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="slide center">
+    <h1 style="font-size: 1.1rem; padding: 0px 15%;">Pour s'assurer que le contenu des fichiers externes est rechargé, il faudra ajouter quelques lignes:</h1>
+    <p>
+    <pre><code class="language-python">import importlib
+import mon_fichier
+
+importlib.reload(mon_fichier)</code></pre>
+    </p>
+    <p>Vous devrez aussi <strong>redémarrer le kernel</strong> une fois après avoir créé le fichier <code class="language-python">.py</code></p>
+</div>
+
+<div class="slide">
+    <h1>Le type <code class="language-python">dict</code></h1>
+    <ul>
+        <li>Groupe de valeurs (similaire aux listes)</li>
+        <li>Contenus dans une seule variable</li>
+        <li>Types peuvent variés</li>
+        <li>Les clé (index) peuvent être de n'importe quel type</li>
+        <li>Pas de début ou de fin</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Créer un <code class="language-python">dict</code></h1>
+    <pre><code class="language-python">personne = { "prenom": "Kevin", "nom": "Tremblay" }
+
+element = { 
+    "nombre": 27, 
+    "symbole": "Co", 
+    "nom": "Cobalt", 
+    "masse": 58.933194,
+}</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Utiliser un <code class="language-python">dict</code></h1>
+    <p>On utilise la clé (index) donné dans les <code class="language-python">[]</code> comme les index numériques de listes.</p>
+    <pre><code class="language-python">p = { "prenom": "Kevin", "nom": "Tremblay" }
+
+print( p["prenom"] )</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Ajouter un item dans un <code class="language-python">dict</code></h1>
+    <pre><code class="language-python">mots = {}
+
+# AJOUT
+mots["test"] = 1
+
+print(mots)</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Supprimer un item dans un <code class="language-python">dict</code></h1>
+    <pre><code class="language-python">lettres = {"A": 10, "B": 20}
+
+# SUPPRIME
+lettres.pop("A")
+
+print(lettres)</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Vérifier si une clé est dans un <code class="language-python">dict</code></h1>
+    <pre><code class="language-python">lettres = {"A": 10, "B": 20}
+
+if "C" in lettres:
+    print("Oui")
+else:
+    print("Non")</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Boucle sur un <code class="language-python">dict</code></h1>
+    <p>Il est possible de faire une boucle sur un <code class="language-python">dict</code>. Nous aurons alors <strong>accès aux clés</strong>.</p>
+    <pre><code class="language-python">liste_prenoms = {"Eric": 35, "Amélie": 25, "Iris": 30}
+
+for prenom in liste_prenoms:
+    age = liste_prenoms[prenom]
+    print(f"{prenom}: {age}")</code></pre>
+</div>
+
+<div class="slide center">
+    <h1><a href="../exercices/#/10" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

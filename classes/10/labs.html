@@ -1,0 +1,54 @@
+<h1>Exercices - Cours 10</h1>
+
+<ol>
+    <li>
+        <p>Créez un dictionnaire qui contient les informations de ce cours:</p>
+        <ul>
+            <li>Titre du cours</li>
+            <li>Numéro du groupe</li>
+            <li>Nom de l'enseignant</li>
+            <li>Nombre d'élèves</li>
+        </ul>
+        <p>Affichez ensuite une phrase qui contient l'ensemble des éléments. Par exemple: Le groupe 101 du cours de Programmation en sciences donné par Eric Gagné contient 23 élèves.</p>
+    </li>
+    <li>
+        <p>À l'aide du dictionnaire fourni, ajoutez une quantité de pommes aléatoires entre 0 et 5 inclusivement et supprimez les champignons du dictionnaire.</p>
+        <pre><code class="language-python">inventaire = {"pomme": 5, "banane": 12, "champignon": 2}</code></pre>
+    </li>
+    <li>
+        <p>À l'aide du dictionnaire fourni, demandez à l'utilisateur d'entrer un nom de fruit avec un <code class="language-python">input()</code> et vérifiez s'il est présent dans le dictionnaire.</p>
+        <p>S'il est présent, affichez "Fruit disponible". Sinon affichez "Rupture de stock"</p>
+        <pre><code class="language-python">fruits = {"pomme": 5, "banane": 2, "fraise": 12}</code></pre>
+    </li>
+    <li>
+        À l'aide du dictionnaire fourni, affichez tous les fruits et leur quantité. Par exemple: "Il reste 5 pommes".
+        <pre><code class="language-python">fruits = {"pomme": 5, "banane": 2, "fraise": 12}</code></pre>
+    </li>
+    <li>
+        <p>Dans le texte donné, calculez combien de fois chacune des lettres est présente.</p>
+        <p>Pour ce faire, vous devrez:</p>
+        <ol>
+            <li>Créer un dictionnaire avec toutes les lettres possibles comme clé et des valeurs de zéro. <code class="language-python">{ "a": 0, "b": 0, ...}</code></li>
+            <li>Faire une boucle pour chaque lettre du texte</li>
+            <li>Si la lettre existe dans le dictionnaire, ajoutez 1 à la valeur.</li>
+            <li>Si la lettre n'existe pas dans le dictionnaire, créez la clé avec une valeur de 1.</li>
+        </ol>
+        <p style="font-size: 0.7rem">
+            <code>Attack the dog then pretend like nothing happened cats are a queer kind of folk my water bowl is clean and freshly replenished, so i'll drink from the toilet or to pet a cat, rub its belly, endure blood and agony, quietly weep, keep rubbing belly purr as loud as possible, be the most annoying cat that you can, and, knock everything off the table or fall over dead (not really but gets sypathy), flex claws on the human's belly and purr like a lawnmower.</code>
+        </p>
+    </li>
+    <li>
+        <p>Avec la liste donnée, calculez combien de fois chaque mot est présent.</p>
+        <p>
+        <pre><code class="language-python">["chat", "chien", "chat", "oiseau", "chien", "chat", "chat", "chien", "chat", "chien", "chat", "oiseau", "chien", "chat", "oiseau", "chien", "chat"]</code></pre>
+        </p>
+        <p>Indice: Les mots devraient devenir des clés dans le dictionnaire.</p>
+    </li>
+    <li>
+        <p>À l'aide du dictionnaire fourni, créez un nouveau dictionnaire qui contient toutes les clés qui ne commencent pas par un A ou un M.</p>
+        <p>
+        <pre><code class="language-python">{"Paul": 16, "Marie": 22, "Jean": 14, "Sophie": 19, "Arnold": 75}</code></pre>
+        </p>
+        <p>Résultat attendu: <code class="language-python">{"Paul": 16, "Jean": 14, "Sophie": 19}</code></p>
+    </li>
+</ol>

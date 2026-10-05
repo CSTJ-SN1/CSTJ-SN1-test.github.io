@@ -1,0 +1,71 @@
+<h1>Exercices - Cours 12</h1>
+
+<ol>
+    <li>
+        <ul>
+            <li>Demandez un nombre entier avec <code class="language-python">input()</code>.</li>
+            <li>Convertissez ce nombre en texte binaire et affichez le résultat.</li>
+            <li>Finalement, comptez le nombre de 0 et de 1 et affichez la quantité pour chacun.</li>
+        </ul>
+        <p>Exemple de résultat pour 42:</p>
+        <pre><code class="language-python">Le binaire pour <em>42</em> est <em>101010</em>. Il contient <em>3</em> zéros et <em>3</em> uns</code></pre>
+    </li>
+    <li>
+        <p>Il est possible de convertir un <code class="language-python">str</code> de zéros et de uns en int à l'aide de la fonction <code class="language-python">int("0b111", 2)</code>.</p>
+        <p>Créez une représentation binaire en texte à l'aide de 16 caractères au hasard entre <code class="language-python">"0"</code> et <code class="language-python">"1"</code>. Attention, ce texte doit débuter par <code class="language-python">"0b"</code>.</p>
+        <p>Finalement, convertissez ce texte en valeur numérique et affichez le résultat.</p>
+    </li>
+    <li>
+        <p>Demandez un nombre entier avec <code class="language-python">input()</code>.</p>
+        <p>Convertissez ce nombre en texte binaire et affichez le résultat.</p>
+        <p>Déterminez si le nombre est pair ou impair en regardant le dernier caractère du <code class="language-python">str</code> produit à l'étape précédente.</p>
+        <p>Exemples:</p>
+        <p>
+        <pre><code class="language-python">42 en binaire: 101010
+                    ^ Pair puisque c'est un 0
+1275 en binaire: 10011111011
+                           ^ Impair puisque c'est un 1
+        </code></pre>
+        </p>
+    </li>
+    <li>
+        <p>Créez une fonction qui réponds à la liste d'attentes suivantes:</p>
+        <pre><code class="language-python"># Code à ajouter ici
+
+assert fn1("Allo") == "A"
+assert fn1("Mais que fait") == "M"
+assert fn1("Cette fonction") == "C"
+assert fn1("?!!!!") == "?"
+print("Succès")
+        </code></pre>
+    </li>
+    <li>
+        <p>Créez une fonction qui réponds à la liste d'attentes suivantes:</p>
+        <pre><code class="language-python"># Code à ajouter ici
+
+assert fn2(10, 5) == 10
+assert fn2(20, 100) == 100
+assert fn2(-2, 2) == 2
+assert fn2(5, 1) == 5
+print("Succès")
+        </code></pre>
+    </li>
+    <li>
+        <p>La fonction <code class="language-python">fn3</code> reçoit deux paramètres. Un nombre et le nombre de zéros à ajouter à sa représentation binaire.</p>
+        <p>Vous devez convertir ne nombre en texte binaire et ajouter le bon nombres de zéros à la fin</p>
+        <p>Finalement, il faudra reconvertir le texte binaire en int et le retourner</p>
+        <pre><code class="language-python">def fn3(nb, qte_zeros):
+    # Convertir en texte binaire
+    # Ajouter qte_zeros zéros
+    # Reconvertir en int
+    # return le int
+
+assert fn3(42, 1) == 84
+assert fn3(42, 2) == 168
+assert fn3(0, 215125) == 0
+assert fn3(1, 16) == 65536
+assert fn3(115521, 2) == 462084
+print("Succès")
+        </code></pre>
+    </li>
+</ol>

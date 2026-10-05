@@ -1,0 +1,132 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 11</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Librairie Numpy</li>
+            <li>Les listes multidimensionnelles</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide center">
+    <img src="../classes/11/medias/numpy.svg" style="max-width: 60%; max-height: 50%;">
+</div>
+
+<div class="slide">
+    <h1>Numpy</h1>
+    <p>La librairie Numpy permet, entre autres:</p>
+    <ul>
+        <li>Créer des listes <em>avec des superpouvoirs</em></li>
+        <li>Manipuler nos données numériques avec aise</li>
+        <li>Obtenir de meilleures performances</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Utilisation de Numpy</h1>
+    <pre><code class="language-python">import numpy as np</code></pre>
+    <p>Puisqu'on réutilisera souvent le mot <code class="language-python">numpy</code>, il est courant de l'abréger à <code class="language-python">np</code></p>
+</div>
+
+<div class="slide">
+    <h1><code class="language-python">np.array</code></h1>
+    <p>Converti une liste en array Numpy</p>
+    <pre><code class="language-python">a = np.array([0, 1, 2, 3])
+
+print(a)        # [0 1 2 3]
+print(type(a))  # &lt;class 'numpy.ndarray'&gt;
+
+print(a[0])     # 0
+print(a[-1])    # 3</code></pre>
+
+</div>
+
+<div class="slide">
+    <h1><code class="language-python">np.arange</code> (array range)</h1>
+    <p>Crée une séquence.</p>
+    <p>Contrairement à <code class="language-python">range</code>, <code class="language-python">np.arange</code> permet d'obtenir des floats!</p>
+    <pre><code class="language-python">a = np.arange(2, 5, 0.5)
+
+print(a) # [2.0  2.5  3.0  3.5  4.0  4.5]</code></pre>
+
+</div>
+
+<div class="slide">
+    <h1><code class="language-python">.reshape</code></h1>
+    <p>Divise les valeurs en plusieurs array.</p>
+    <p>Doit être utilisé sur une variable contenant un Numpy array.</p>
+    <pre style="font-size: 0.8rem"><code class="language-python">noms = np.array(["Vex", "Jester", "Vax", "Caleb", "Nott", "Scanlan"])
+groupes = noms.reshape(3, 2) # 3 groupes de 2
+
+print(groupes)
+# [['Vex' 'Jester']
+#  ['Vax' 'Caleb']
+#  ['Nott' 'Scanlan']]</code></pre>
+</div>
+
+<div class="slide">
+    <h1><code class="language-python">np.linspace</code> (linear space)</h1>
+    <p>Divise un interval en séquence.</p>
+    <pre><code class="language-python">a = np.linspace(0, 10, 5) # de 0 à 10 en 5 valeurs
+
+print(a) # [ 0.0  2.5  5.0  7.5  10.0 ]</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Aléatoire avec Numpy</h1>
+    <p>Numpy offre la possibilité de créer une séquence de nombres aléatoires constants.</p>
+    <pre style="font-size: 0.8rem"><code class="language-python">rng = np.random.default_rng(424242) # 424242 est le "seed"
+
+n1 = rng.random()           # Toujours les mêmes valeurs pour un même "seed"
+n2 = rng.integers(-10, 10)
+n3 = rng.uniform(-10, 10)</code></pre>
+    <p>On peut aussi ajouter demander une quantité d'aléatoires en array.</p>
+    <pre style="font-size: 0.8rem"><code class="language-python">np.random.uniform(-10, 10, 50) # 50 nombres</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Fonctions mathématiques sur des array</h1>
+    <p>Contrairement aux listes, il est possible d'appliquer certains opérateurs à chaque élément d'un array Numpy.</p>
+    <pre><code class="language-python">a = np.array([0, 1, 2.5, 20])
+
+b = a * 2 # [0, 2, 5, 40]
+c = np.sin(a) # Crée un array avec sinus appliqué chaque item </code></pre>
+</div>
+
+<div class="slide center">
+    <h1>Numpy - Aller plus loin</h1>
+    <p><a target="_blank" href="https://lectures.scientific-python.org/intro/numpy/array_object.html">https://lectures.scientific-python.org/intro/numpy/array_object.html</a></p>
+</div>
+
+<div class="slide center">
+    <h1><code class="language-python">list</code> et <code class="language-python">np.array</code> à plusieurs "dimensions"</h1>
+    <div>
+        <img src="../classes/11/medias/3d_array.jpg" style="width: 80%; max-height: 70vh;">
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Dimensions multiples dans nos listes</h1>
+    <p>Le concept de dimensions multiples consiste à <strong>imbriquer des listes dans des listes</strong>.</p>
+    <pre><code class="language-python">a = [
+    [1, 2, 3],
+    [10, 20, 30],
+    [1000, 0, 0],
+]</code></pre>
+    <p>Pour les utiliser, on enchaine les index.</p>
+    <pre><code class="language-python">print( a[1][2] ) # 2e ligne, 3e colonne : 30</code></pre>
+</div>
+
+<div class="slide center">
+    <h1><a href="../exercices/#/11" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

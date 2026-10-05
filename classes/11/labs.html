@@ -1,0 +1,58 @@
+<h1>Exercices - Cours 11</h1>
+
+<ol>
+    <li>
+        <p>À l'aide d'une seule ligne Numpy, créez une liste qui débute à 10, se termine à 15 et augmente à coup de 0,5.</p>
+        <p>Affichez ensuite chaque valeur de la liste sur une ligne individuelle.</p>
+    </li>
+    <li>
+        <p>Demandez un nombre avec <code class="language-python">input()</code>.</p>
+        <p>Créez ensuite une liste de valeurs partant de 0 à <span class="latex">2\pi</span>. La quantité de valeurs devrait être le nombre donné par le <code class="language-python">input</code>.</p>
+        <p>Indice: <code class="language-python">np.linspace()</code></p>
+    </li>
+    <li>
+        <p>À l'aide de numpy, générez 100 nombres aléatoires entre 0 et 1 en float.</p>
+        <p>Groupez ensuite ces nombres en groupes de 10 avec <code class="language-python">reshape</code>.</p>
+        <p>Finalement, utilisez la commande Matplotlib <code class="language-python">plt.imshow(liste_de_nombres_ici)</code>.</p>
+    </li>
+    <li>
+        <p>Avec la liste donnée, multipliez tous les résultats par 2.</p>
+        <p>Combien de résultats sont supérieurs à 1000?</p>
+        <p>
+        <pre><code class="language-python">[942, 245, 683, 658, 612, 305, 766, 687, 249, 923,  35, 374, 468,
+901, 531, 109,  74, 578, 110, 987, 569, 712, 394, 800, 250, 344,
+16, 929, 786, 762, 746, 880, 828, 981, 276, 186, 525, 493, 844,
+691, 564, 661, 829, 109, 847,  67,   0, 186, 391, 105, 684, 844,
+681, 434, 453, 326, 718, 990, 210, 994, 691, 598,  34, 899, 212,
+841, 637, 923, 172, 177, 200, 721, 740,   1, 549, 123,  48, 164,
+400, 306, 452, 808, 951, 675, 500, 291, 450, 613, 928, 792, 831,
+552, 928, 398, 205, 649, 841, 780,   2, 781]</code></pre>
+        </p>
+    </li>
+    <li>
+        <p>Complétez le code suivant afin de générer un nuage de points placés au hasard entre -10 et 10 en x et y.</p>
+        <p>Aucune ligne supplémentaire ne doit être ajoutée. Vous devez seulement modifier la ligne du <code class="language-python">ax.plot</code>.</p>
+        <p>
+        <pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+
+fig = plt.figure()
+ax = fig.add_subplot()
+
+ax.plot(???, ???, ".")
+
+plt.show()</code></pre>
+        </p>
+    </li>
+    <li>
+        <p>Générez 100 000 nombres au hasard (valeurs au choix). Écrivez chacun de ces nombres dans un fichier texte avec un nombre par ligne!</p>
+        <p><strong>Rappel</strong>: Le symbole pour représenter un saut de ligne est <code class="language-python">"\n"</code></p>
+    </li>
+    <li>
+        <p>Créez une liste de syllabes. Par exemple</p>
+        <pre><code class="language-python">syllabes = ["a", "e", "cha", "ba", "re"]</code></pre>
+        <p>Pigez ensuite au hasard de 2 à 5 syllabes dans la liste.</p>
+        <p>Collez ensemble ces syllabes pour former un nom de personnage.</p>
+        <p><strong>Défi</strong>: La première lettre devrait être en majuscule!</p>
+    </li>
+</ol>

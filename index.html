@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programmation en sciences - Cégep de Saint-Jérôme - Eric Gagné</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="libs/katex/katex.css">
+        <link rel="stylesheet" href="libs/prism/prism.css">
+    </head>
+    <body>
+        <canvas class="bg"></canvas>
+        <div class="container">
+            <header>
+                <!-- <img src="images/logo.svg" class="logo"> -->
+                <h1>Programmation en sciences</h1>
+                <h2>Eric Gagné - CSTJ</h2>
+                <a class="schedule" target="_blank" href="images/horaire.png">horaire</a>
+            </header>
+            <main>
+                <div class="editor">
+                    <a target="_blank" href="https://cstj-sn1.github.io/jupyter-lite/editeur/lab/index.html">Ouvrir l'éditeur</a>
+                    <a target="_blank" href="https://egagne.techinfo-cstj.ca/sn1/votes/">Votez! (TP1)</a>
+                </div>
+                <div class="line">
+                    <div class="left">
+                        <div class="label">Cours 1</div>
+                        <div class="description">
+                            <ul>
+                                <li>Introduction au cours et à Python</li>
+                                <li>Variables</li>
+                                <li>Types de valeur</li>
+                                <li>Opérateurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/1">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/1">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="left">
+                        <div class="label">Cours 2</div>
+                        <div class="description">
+                            <ul>
+                                <li>Structure de contrôle : Conditions</li>
+                                <li>Comparaisons et booléens</li>
+                                <li>Lecture d'entrées utilisateur</li>
+                                <li>Types de variables</li>
+                                <li>Conversion de types</li>
+                                <li>Commentaires</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/2">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/2">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="left">
+                        <div class="label">Cours 3</div>
+                        <div class="description">
+                            <ul>
+                                <li>Nombres aléatoires</li>
+                                <li>Matplotlib et graphiques (1 de 3)</li>
+                                <li>Structure de contrôle : Boucles (1 de 2)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/3">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/3">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="left">
+                        <div class="label">Cours 4</div>
+                        <div class="description">
+                            <ul>
+                                <li>Listes</li>
+                                <li>Structure de contrôle : Boucles (2 de 2)</li>
+                                <li>Matplotlib et graphiques (2 de 3)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/4">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/4">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="left">
+                        <div class="label">Cours 5</div>
+                        <div class="description">
+                            <ul>
+                                <li>Matplotlib et graphiques (3 de 3)</li>
+                                <li>Pratique et exploration</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/5">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/5">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="left">
+                        <div class="label">Cours 6</div>
+                        <div class="description">
+                            <ul>
+                                <li>Lecture et écriture de fichiers</li>
+                                <li>Fichiers CSV</li>
+                                <li>Manipulation de texte</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/6">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/6">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="left">
+                        <div class="label">Cours 7</div>
+                        <div class="description">
+                            <ul>
+                                <li>Révision et exercices</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/tp1/devis_TP1.pdf">TP1</a></div>
+                        <div class="theory"><a target="_blank" href="theorie/tp1/tp1_explications.mp4">TP1 - Explications</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/7">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line disabled">
+                    <div class="left">
+                        <div class="label">Cours 8</div>
+                        <div class="description">
+                            <ul>
+                                <li>Examen de mi-session</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                    </div>
+                </div>
+                <div class="line disabled">
+                    <div class="left">
+                        <div class="label">Cours 9</div>
+                        <div class="description">
+                            <ul>
+                                <li>Création de fonctions</li>
+                                <li>Valeurs d'entrées et sorties</li>
+                                <li>Création de fonctions avec paramètres</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/9">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/9">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line disabled">
+                    <div class="left">
+                        <div class="label">Cours 10</div>
+                        <div class="description">
+                            <ul>
+                                <li>Création de fonctions (suite)</li>
+                                <li>Le type dictionnaire</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/10">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/10">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line disabled">
+                    <div class="left">
+                        <div class="label">Cours 11</div>
+                        <div class="description">
+                            <ul>
+                                <li>Numpy</li>
+                                <li>Listes multidimentionnelles (2D)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/11">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/11">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line disabled">
+                    <div class="left">
+                        <div class="label">Cours 12</div>
+                        <div class="description">
+                            <ul>
+                                <li>Binaire</li>
+                                <li>Représentation en mémoire</li>
+                                <li>Tests de code</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/12">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/12">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line disabled">
+                    <div class="left">
+                        <div class="label">Cours 13</div>
+                        <div class="description">
+                            <ul>
+                                <li>Révision et exercices</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="theory"><a target="_blank" href="theorie/index.html#/13">Théorie</a></div>
+                        <div class="lab"><a target="_blank" href="exercices/index.html#/13">Exercices</a></div>
+                    </div>
+                </div>
+                <div class="line disabled">
+                    <div class="left">
+                        <div class="label">Cours 14</div>
+                        <div class="description">
+                            <ul>
+                                <li>Synthèse partie A (oral)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                    </div>
+                </div>
+                <div class="line disabled">
+                    <div class="left">
+                        <div class="label">Cours 15</div>
+                        <div class="description">
+                            <ul>
+                                <li>Synthèse partie B (examen pratique)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="js/canvas-bg.js" type="module"></script>
+        <script src="libs/prism/prism.js"></script>
+        <script src="js/main.js" type="module"></script>
+    </body>
+</html>

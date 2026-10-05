@@ -1,0 +1,117 @@
+<div class="slide center intro">
+    <img src="../classes/shared/title_animation.svg">
+    <h1>Programmation en sciences</h1>
+    <h2>Cours 09</h2>
+</div>
+
+<div class="slide">
+    <h1>Sujets de la semaine</h1>
+    <div class="planning">
+        <ul>
+            <li>Les fonctions</li>
+            <li>Entrées et sorties de fonctions</li>
+            <li>Paramètres de fonctions</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Les fonctions</h1>
+    <p>En programmation les fonctions sont:</p>
+    <ul>
+        <li>Un nom associé à du code</li>
+        <li>Une logique réutilisable</li>
+        <li>Le traitement des valeurs d'entrées pour produire un résultat</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Structure d'une fonction - Déclaration</h1>
+    <p>L'utilisation des fonctions est divisée en deux parties.</p>
+    <p>On peut <strong>déclarer</strong> une nouvelle fonction:</p>
+    <pre><code class="language-python">def sqrtOuZero(n):
+    if n > 0:
+        return math.sqrt(n)
+    else:
+        return 0</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Structure d'une fonction - Appel</h1>
+    <p>On peut aussi <strong>appeler</strong> une fonction existante:</p>
+    <pre><code class="language-python">a = sqrtOuZero(25)
+b = sqrtOuZero(10)
+c = sqrtOuZero(-159)</code></pre>
+</div>
+
+<div class="slide">
+    <h1>Paramètres - Les valeurs d'entrées</h1>
+    <p>Une fonction peut avoir une quantité de valeurs d'entrées variable.</p>
+    <div class="column-2">
+        <div>
+            <pre><code class="language-python"># Aucun paramètre
+random.random()
+tortue.afficher()</code></pre>
+
+            <p><pre><code class="language-python"># Un paramètre (très commun)
+print("test")
+math.sqrt(25)
+tortue.avancer(50)</code></pre></p>
+        </div>
+        <div>
+            <pre><code class="language-python"># Deux paramètres (très commun)
+tortue.nouveau(100, 100)</code></pre>
+            <p><pre><code class="language-python"># Encore plus!
+tortue.rectangle(10, 10, 30, 30)</code></pre>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="slide center">
+    <h1>Les paramètres seront reçus dans les parenthèses de la fonction</h1>
+    <pre style="font-size: 1.5rem"><code class="language-python">def rectangle(x, y, largeur, hauteur):</code></pre>
+</div>
+
+<div class="slide">
+    <h1><code class="language-python">return</code> - La valeur de sortie</h1>
+    <ul>
+        <li>Une fonction sans <code class="language-python">return</code> retournera tout de même la valeur <code class="language-python">None</code></li>
+        <li>Dès qu'une ligne <code class="language-python">return</code> est exécutée, la fonction se termine.</li>
+        <li>Une fonction peut retourne <strong>une seule valeur</strong> de <strong>n'importe quel type</strong>. Ce qui inclus les listes!</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Ordre d'exécution</h1>
+    <div class="column-2">
+        <div>
+            <pre><code class="language-python">def test(texte):    # <---╮
+    print("B")      # 2   |
+    print(texte)    # 3   |
+    # --------------------|---╮
+                    #     |   |
+print("A")          # 1   |   |
+test("C")           # ----╯   |
+print("D")          # 4  <----╯</code></pre>
+        </div>
+        <div>
+            <pre><code class="language-python"># A
+# B
+# C
+# D</code></pre>
+        </div>
+    </div>
+</div>
+
+<div class="slide center">
+    <h1>Une fonction doit toujours être<br>déclarée <span style="text-decoration: underline">avant</span> d'être utilisée.</h1>
+</div>
+
+<div class="slide center">
+    <h1><a href="../exercices/#/9" target="_blank">Exercices et devoirs</a></h1>
+</div>
+
+<div class="slide center">
+    <h1>À la semaine prochaine!</h1>
+</div>

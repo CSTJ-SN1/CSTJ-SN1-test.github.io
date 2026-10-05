@@ -1,0 +1,15 @@
+{
+    "kernels": [{
+        "name": "python",
+        "language": "python",
+        "argv": [],
+        "display_name": "Python (Pyodide)"
+    }],
+    "pyodide": {
+        "packages": [
+            "numpy",
+            "matplotlib",
+            "pandas"
+        ]
+    }
+}

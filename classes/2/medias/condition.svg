@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 686 761">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        font-size: 69.9px;
+      }
+
+      .st0, .st1 {
+        font-family: Consolas, Consolas;
+      }
+
+      .st2 {
+        stroke: #00b707;
+      }
+
+      .st2, .st3 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .st4 {
+        fill: #d4d4ff;
+      }
+
+      .st5, .st6 {
+        fill: #00b707;
+      }
+
+      .st5, .st7, .st8, .st9 {
+        font-family: Consolas-Italic, Consolas;
+        font-style: italic;
+      }
+
+      .st5, .st7, .st8, .st9, .st1 {
+        font-size: 60px;
+      }
+
+      .st10, .st9 {
+        fill: #8f0000;
+      }
+
+      .st11 {
+        fill: #07a;
+      }
+
+      .st8 {
+        fill: gray;
+      }
+
+      .st12 {
+        opacity: .2;
+      }
+
+      .st13 {
+        letter-spacing: 0em;
+      }
+
+      .st1 {
+        fill: #111;
+      }
+
+      .st3 {
+        stroke: #8f0000;
+      }
+    </style>
+  </defs>
+  <text transform="translate(10 66.4)"><tspan class="st0"><tspan class="st11" x="0" y="0">if</tspan><tspan class="st13" x="76.8" y="0" xml:space="preserve">       :</tspan></tspan><tspan class="st7"><tspan x="0" y="72" xml:space="preserve">    </tspan><tspan class="st6" x="132" y="72">Code si </tspan></tspan><tspan class="st5"><tspan x="0" y="144" xml:space="preserve">    le booléen</tspan></tspan><tspan class="st5"><tspan x="0" y="216" xml:space="preserve">    est True</tspan></tspan><tspan class="st0"><tspan class="st11" x="0" y="299.8">else</tspan><tspan x="153.7" y="299.8">:</tspan></tspan><tspan class="st7"><tspan x="0" y="371.8" xml:space="preserve">    </tspan><tspan class="st10" x="132" y="371.8">Code si </tspan></tspan><tspan class="st9"><tspan x="0" y="443.8" xml:space="preserve">    le booléen</tspan></tspan><tspan class="st9"><tspan x="0" y="515.8" xml:space="preserve">    est False</tspan></tspan><tspan class="st1"><tspan x="0" y="659.8">...suite du code</tspan></tspan></text>
+  <rect class="st4" x="112" y="13" width="247" height="70"/>
+  <text class="st8" transform="translate(122 66)"><tspan x="0" y="0">booléen</tspan></text>
+  <g class="st12">
+    <path class="st2" d="M436,264c262,0,284,211,102,402"/>
+    <line class="st2" x1="537.4" y1="668.7" x2="535.4" y2="643.2"/>
+    <line class="st2" x1="535.9" y1="667.1" x2="561.3" y2="665.1"/>
+  </g>
+  <g class="st12">
+    <path class="st3" d="M446,570c96-8,47,91,47,91"/>
+    <line class="st3" x1="492.7" y1="663" x2="484.1" y2="639"/>
+    <line class="st3" x1="490.8" y1="662.1" x2="514.8" y2="653.6"/>
+  </g>
+</svg>
