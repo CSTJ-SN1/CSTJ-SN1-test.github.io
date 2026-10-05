@@ -1,0 +1,11 @@
+# Versions figées du site JupyterLite (build local et GitHub Action).
+# Changer une version peut casser l'extension remote-drive : tester avant.
+jupyterlite-core==0.7.1
+jupyterlite-pyodide-kernel==0.7.0
+# Extensions déjà présentes dans le build d'origine
+jupyterlab_widgets==3.0.15
+notebook==7.5.2
+jupyterlab_pygments==0.3.0
+# Outils pour construire l'extension remote-drive
+jupyterlab>=4.5.1,<4.6
+jupyter-builder>=1.2.0,<2

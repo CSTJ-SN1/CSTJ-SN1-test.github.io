@@ -1,0 +1,7 @@
+{
+  "jupyter-lite-schema-version": 0,
+  "jupyter-config-data": {
+    "disabledExtensions": ["@jupyterlite/services-extension:default-drive"],
+    "remoteDriveApiUrl": "http://127.0.0.1:8001/api"
+  }
+}
