@@ -1,1 +1,3 @@
 .jupyterlite.doit.db
+# Construit par la GitHub Action (.github/workflows/pages.yml)
+editeur/

@@ -1,0 +1,82 @@
+# Publie le site sur GitHub Pages, avec l'éditeur JupyterLite construit à
+# partir de jupyter-lite/ (y compris l'extension remote-drive).
+#
+# Paramètre du dépôt requis : Settings > Pages > Source = « GitHub Actions ».
+
+name: Publier le site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: jupyter-lite/requirements.txt
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Installer JupyterLite et les outils de build
+        run: pip install -r jupyter-lite/requirements.txt
+
+      - name: Construire et installer l'extension remote-drive
+        working-directory: jupyter-lite/remote-drive
+        run: |
+          jlpm install --immutable
+          jlpm build:prod
+          pip install .
+
+      # Avant, Jekyll ignorait les fichiers « _* » et « .* » : on garde ce
+      # comportement pour ne pas publier les dossiers _prof/.
+      - name: Copier les pages statiques
+        run: |
+          mkdir _site
+          rsync -a \
+            --exclude='.*' \
+            --exclude='_*' \
+            --exclude='/CLAUDE.md' \
+            --exclude='/jupyter-lite/' \
+            ./ _site/
+
+      - name: Construire l'éditeur JupyterLite
+        working-directory: jupyter-lite
+        run: jupyter lite build --output-dir ../_site/jupyter-lite/editeur
+
+      - name: Vérifier que l'extension est incluse
+        run: |
+          grep -q '"cstj-remote-drive"' _site/jupyter-lite/editeur/jupyter-lite.json
+          if find _site -path '*/_prof*' | grep -q .; then
+            echo "Des dossiers _prof seraient publiés." >&2
+            exit 1
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
