@@ -203,7 +203,7 @@ export function showLoginDialog(options: ILoginDialogOptions): Promise<void> {
     const important = element('p', 'cstj-login-important');
     important.id = 'cstj-login-important';
     const strong = element('strong');
-    strong.textContent = '!Important!';
+    strong.textContent = 'IMPORTANT!';
     important.append(
       strong,
       document.createTextNode(
